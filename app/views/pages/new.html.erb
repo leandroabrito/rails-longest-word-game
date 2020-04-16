@@ -1,0 +1,19 @@
+<!-- A page to display the game settings (random letters), with a form for the user to type a word. A button to submit this form. -->
+<h1>New Game</h1>
+
+<% @chars_arr.each do |char| %>
+  <div class="card" style="display: inline;"> <%= char %> </div>
+<% end %>
+
+<form action="/score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label>Whats the longest word you can find?</label>
+  <input type="text" name="word">
+  <input type="submit" value="Play!">
+</form>
+
+
+</form>
+
+<!--
+ style="width: 50px; height: 50px; background-color: gray; display: inline;" -->
