@@ -12,7 +12,6 @@ class PagesController < ApplicationController
     @word = params[:word]
     @exists = word_exists?(@word)
     @in_grid = in_grid?(@word, @grid)
-
   end
 
   private
